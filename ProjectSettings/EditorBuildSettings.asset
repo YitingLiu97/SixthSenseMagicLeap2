@@ -86,9 +86,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/Magic Leap Soundfield/1.2.37-b/MSA Demo/Scenes/MSADemo.unity
     guid: 3503692a0a326c540a58accbbaa9e0d3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Spatial Meshing.unity
     guid: 96ed0b8fee2107e4c8a0727b22c79c05
+  - enabled: 1
+    path: Assets/MagicLeap-Tools/Examples/ControlInput/Scenes/ControlInput.unity
+    guid: fd5010ca48b01e04da34c57da3610239
   m_configObjects:
     com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: e74d74253eeaaee41a6792c8d86712a8, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 59ceb475d0dbca0478340e450c5339b6, type: 2}
