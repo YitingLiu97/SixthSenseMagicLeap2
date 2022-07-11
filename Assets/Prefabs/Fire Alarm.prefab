@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimumScaleOfInitial: 0.5
-  maximumScaleOfInitial: 2
+  maximumScaleOfInitial: 10
   steps: 5
   animationSpeed: 10
 --- !u!114 &3612706022886984021

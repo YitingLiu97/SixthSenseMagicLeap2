@@ -2688,6 +2688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book
       objectReference: {fileID: 0}
+    - target: {fileID: 6159133981158889217, guid: 80b27133185bd6d4aa8b8e3476c76fe5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6159133981158889240, guid: 80b27133185bd6d4aa8b8e3476c76fe5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2761,6 +2765,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6159133981158889246, guid: 80b27133185bd6d4aa8b8e3476c76fe5, type: 3}
+      propertyPath: OnDraggedCollisionExit.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6159133981158889246, guid: 80b27133185bd6d4aa8b8e3476c76fe5, type: 3}
       propertyPath: OnDraggedCollisionExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6430293851728804564}
@@ -2790,82 +2798,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80b27133185bd6d4aa8b8e3476c76fe5, type: 3}
---- !u!1 &884215746328301498 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6159133981158889217, guid: 80b27133185bd6d4aa8b8e3476c76fe5, type: 3}
-  m_PrefabInstance: {fileID: 884215746328301497}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &884215746328301499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884215746328301498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 022306abdab445e4da40ee2bcf2f63bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnTriggerEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTriggerStayed:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTriggerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCollisionEntered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 884215746328301500}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCollisionStayed:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCollisionExited:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 884215746328301500}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!82 &884215746328301500 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6159133981158889247, guid: 80b27133185bd6d4aa8b8e3476c76fe5, type: 3}
-  m_PrefabInstance: {fileID: 884215746328301497}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1135095491074079901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3286,67 +3218,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 4067099838745503349, guid: fc06cca8e0ef6ce4f85b83ea8373bc59, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc06cca8e0ef6ce4f85b83ea8373bc59, type: 3}
---- !u!1 &7011475635147102549 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4067099838745503349, guid: fc06cca8e0ef6ce4f85b83ea8373bc59, type: 3}
-  m_PrefabInstance: {fileID: 7011475635147102548}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7011475635147102550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011475635147102549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 022306abdab445e4da40ee2bcf2f63bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnTriggerEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTriggerStayed:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTriggerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCollisionEntered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6430293851604696895}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCollisionStayed:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCollisionExited:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6430293851604696895}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &7235541112442523340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3542,11 +3419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3612706022886984029, guid: cbe194716a36f284ca44c8b2b611b783, type: 3}
       propertyPath: OnTargetExit.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3612706022886984029, guid: cbe194716a36f284ca44c8b2b611b783, type: 3}
       propertyPath: OnTargetEnter.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3612706022886984029, guid: cbe194716a36f284ca44c8b2b611b783, type: 3}
       propertyPath: OnDraggedCollisionExit.m_PersistentCalls.m_Calls.Array.size
@@ -3602,53 +3479,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbe194716a36f284ca44c8b2b611b783, type: 3}
---- !u!1 &7718631880106161033 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3612706022886984002, guid: cbe194716a36f284ca44c8b2b611b783, type: 3}
-  m_PrefabInstance: {fileID: 7718631880106161032}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7718631880106161034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7718631880106161033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 022306abdab445e4da40ee2bcf2f63bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnTriggerEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTriggerStayed:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTriggerExited:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCollisionEntered:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6430293851728804564}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCollisionStayed:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCollisionExited:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &7998434592460634549
 MonoBehaviour:
   m_ObjectHideFlags: 0

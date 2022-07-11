@@ -57,7 +57,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6159133981158889217}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf8775a4da0bd944a1d66f79ceb8b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetRenderer: {fileID: 6159133981158889242}
+  targetRenderer: {fileID: 9001005160830854675}
   targetedColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 0, g: 1, b: 0, a: 1}
   draggedColor: {r: 1, g: 0, b: 1, a: 1}
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minimumScaleOfInitial: 0.5
-  maximumScaleOfInitial: 2
+  maximumScaleOfInitial: 5
   steps: 5
   animationSpeed: 10
 --- !u!114 &6159133981158889238
@@ -489,6 +489,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: aabeba886e016454f865d5e45c9a3f61, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d1a7bdf45a2b6a34295ea88932221588, type: 2}
     - target: {fileID: 919132149155446097, guid: aabeba886e016454f865d5e45c9a3f61, type: 3}
       propertyPath: m_Name
       value: uploads_files_769288_SM_Book
@@ -498,5 +502,10 @@ PrefabInstance:
 --- !u!4 &7828050401560108412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aabeba886e016454f865d5e45c9a3f61, type: 3}
+  m_PrefabInstance: {fileID: 7721539350376577687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &9001005160830854675 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: aabeba886e016454f865d5e45c9a3f61, type: 3}
   m_PrefabInstance: {fileID: 7721539350376577687}
   m_PrefabAsset: {fileID: 0}
