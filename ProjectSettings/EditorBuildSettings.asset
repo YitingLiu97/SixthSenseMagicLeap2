@@ -101,9 +101,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/MagicLeap-Tools/Examples/ControlPointer/Scenes/ControlPointer.unity
     guid: c345e99c1a021924fa7cadd188f60050
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ControlPointer_Scene.unity
     guid: 50dd2d92bb9dded40b96e6bac0fbf997
+  - enabled: 1
+    path: Assets/Scenes/AlarmScene.unity
+    guid: cdb6606d6eaa7694386a9ce48eefb1f3
   m_configObjects:
     com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: e74d74253eeaaee41a6792c8d86712a8, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 59ceb475d0dbca0478340e450c5339b6, type: 2}

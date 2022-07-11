@@ -7,20 +7,30 @@ public class SpatializationRandomizer : MonoBehaviour
     // Start is called before the first frame update
     // randomize the location of the audio sources around the radius of the head 
     public GameObject playerCamera;
+    public Vector2 range;
     public GameObject audioGroupAlarm;
     public List<GameObject> audioChildrenAlarm;
     public List<AudioSource> audioSourceChildrenAlarm;
-    public List<Vector3> newLocationsAlarm;
+    //  public List<Vector3> newLocationsAlarm;
+    public List<float> timerRemainingsforAlarm;
+    public float timerForAlarm, timerForAlarmRemaining;
+
     public GameObject audioGroupBook;
     public List<GameObject> audioChildrenBook;
     public List<AudioSource> audioSourceChildrenBook;
-    public List<Vector3> newLocationsBook;
-    public Vector2 range;
-    public List<float> timerRemainingsforAlarm;
+    //    public List<Vector3> newLocationsBook;
     public List<float> timerRemainingsforBook;
-    public List<float> timerRemainingsforDoor;
-    public float timerForAlarm, timerForAlarmRemaining;
     public float timerForBook, timerForBookRemaining;
+
+    public GameObject audioGroupTV;
+    public List<GameObject> audioChildrenTV;
+    public List<AudioSource> audioSourceChildrenTV;
+    //    public List<Vector3> newLocationsTV;
+    public List<float> timerRemainingsforTV;
+    public float timerForTV, timerForTVRemaining;
+
+    //public List<float> timerRemainingsforDoor;
+
     public bool experienceTimerOn = false;
     public bool alarm = false, book = false, tv = false, door = false;
 
@@ -29,9 +39,11 @@ public class SpatializationRandomizer : MonoBehaviour
 
         timerForAlarmRemaining = timerForAlarm;
         timerForBookRemaining = timerForBook;
+        timerForTVRemaining = timerForTV;
         GetListNumberAndClipLength(audioGroupAlarm, audioChildrenAlarm, audioSourceChildrenAlarm, timerRemainingsforAlarm);
         GetListNumberAndClipLength(audioGroupBook, audioChildrenBook, audioSourceChildrenBook, timerRemainingsforBook);
-        //        GetListNumberAndClipLength(audioGroupDoor, audioChildrenAlarm, audioSourceChildrenAlarm);
+        GetListNumberAndClipLength(audioGroupTV, audioChildrenTV, audioSourceChildrenTV, timerRemainingsforTV);
+        //GetListNumberAndClipLength(audioGroupDoor, audioChildrenAlarm, audioSourceChildrenAlarm);
     }
 
     private void GetListNumberAndClipLength(GameObject _audioGroup, List<GameObject> _audioChildren, List<AudioSource> _audioSourceChildren, List<float> _timerRemainingsforType)
@@ -58,6 +70,8 @@ public class SpatializationRandomizer : MonoBehaviour
         }
     }
 
+
+    //randomize after end of the audio 
     Vector3 Randomization(Transform _player, Transform _audio)
     {
         Vector3 _newLocation = new Vector3(Random.Range(range.x, range.y), Random.Range(range.x, range.y), Random.Range(range.x, range.y));
@@ -80,9 +94,6 @@ public class SpatializationRandomizer : MonoBehaviour
     }
 
 
-    //randomize after end of the audio 
-
-
     void CheckAudio(List<AudioSource> audioSourceChildren)
     {
 
@@ -103,8 +114,6 @@ public class SpatializationRandomizer : MonoBehaviour
         }
 
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(alarm)
@@ -158,28 +167,55 @@ public class SpatializationRandomizer : MonoBehaviour
 
             UpdateLocations(playerCamera, audioChildrenBook, timerRemainingsforBook, audioSourceChildrenBook);
         }
+
+
+        if(tv)
+        {
+
+            if(experienceTimerOn)
+            {
+                if(timerForTVRemaining > 0)
+                {
+
+                    timerForTVRemaining -= Time.deltaTime;
+
+
+                }
+                else
+                {
+
+                    Debug.Log($"end audio for TV");
+                    timerForTVRemaining = timerForTV;
+                    CheckAudio(audioSourceChildrenTV);
+                }
+
+            }
+
+            UpdateLocations(playerCamera, audioChildrenTV, timerRemainingsforTV, audioSourceChildrenTV);
+        }
+
     }
 
-    
-/*    private void EndWithTimer(float _timerForGroupRemaining, float _timerForType, List<AudioSource> audioSourceChildrenGroup)
-    {
-        Debug.Log($"end audio {_timerForType}, {_timerForGroupRemaining}");
 
-        if(_timerForGroupRemaining > 0)
+    /*    private void EndWithTimer(float _timerForGroupRemaining, float _timerForType, List<AudioSource> audioSourceChildrenGroup)
         {
+            Debug.Log($"end audio {_timerForType}, {_timerForGroupRemaining}");
 
-            _timerForGroupRemaining -= Time.deltaTime;
+            if(_timerForGroupRemaining > 0)
+            {
+
+                _timerForGroupRemaining -= Time.deltaTime;
 
 
-        }
-        else
-        {
+            }
+            else
+            {
 
-            Debug.Log($"end audio");
-            _timerForGroupRemaining = _timerForType;
-            CheckAudio(audioSourceChildrenGroup);
-        }
-    }*/
+                Debug.Log($"end audio");
+                _timerForGroupRemaining = _timerForType;
+                CheckAudio(audioSourceChildrenGroup);
+            }
+        }*/
 
     void UpdateLocations(GameObject _player, List<GameObject> _audioChildren, List<float> timerRemainings, List<AudioSource> audioSourceChildren)
     {
