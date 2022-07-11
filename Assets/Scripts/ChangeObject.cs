@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MagicLeapTools;
+using UnityEngine.Video; 
 
 public class ChangeObject : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class ChangeObject : MonoBehaviour
     public int counter;
     [SerializeField] SpatializationRandomizer sRandomizer;
     public GameObject fireAlarm, book, tv;
-    private AudioSource fireAlarmAS, bookAS, tvAS;
+    private AudioSource fireAlarmAS, bookAS, tvAS, tvChildAS;
+    private VideoPlayer tvVP; 
     void Start()
     {
 
@@ -18,14 +20,16 @@ public class ChangeObject : MonoBehaviour
         fireAlarmAS = fireAlarm.GetComponent<AudioSource>();
         bookAS = book.GetComponent<AudioSource>();
         tvAS = tv.GetComponent<AudioSource>();
+       //tvChildAS = tv.GetComponentInChildren<AudioSource>();
 
+        tvVP = tv.GetComponentInChildren<VideoPlayer>();
     }
 
     void AddCounter()
     {
 
         counter++;
-        if(counter % 3 == 1)
+        if(counter % 3 == 0)
         {
             Debug.Log("show alarm scene");
             //alarm scene 
@@ -35,7 +39,7 @@ public class ChangeObject : MonoBehaviour
             ToggleActivityTV(false);
 
         }
-        else if(counter % 3 == 2)
+        else if(counter % 3 == 1)
         {
             Debug.Log("show book scene");
 
@@ -113,12 +117,25 @@ public class ChangeObject : MonoBehaviour
             if(!tvAS.isPlaying)
             {
                 tvAS.Play();
+            } 
+          /*  if(!tvChildAS.isPlaying)
+            {
+                tvChildAS.Play();
+            }*/
+            if(!tvVP.isPlaying)
+            {
+
+                tvVP.Play();
             }
+
+         
+         
         }
         else
         {
             tvAS.Stop();
-
+          //  tvChildAS.Stop();
+            tvVP.Stop();
         }
 
         foreach(var item in sRandomizer.audioSourceChildrenTV)
