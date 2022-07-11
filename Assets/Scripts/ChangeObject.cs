@@ -7,16 +7,22 @@ public class ChangeObject : MonoBehaviour
 {
     ControlInput controlInput;
     public int counter;
-    [SerializeField]SpatializationRandomizer sRandomizer;
+    [SerializeField] SpatializationRandomizer sRandomizer;
     public GameObject fireAlarm, book, tv;
+    private AudioSource fireAlarmAS, bookAS, tvAS;
     void Start()
     {
-  
+
         controlInput = GetComponent<ControlInput>();
         controlInput.OnTouchHold.AddListener(AddCounter);
+        fireAlarmAS = fireAlarm.GetComponent<AudioSource>();
+        bookAS = book.GetComponent<AudioSource>();
+        tvAS = tv.GetComponent<AudioSource>();
+
     }
 
-    void AddCounter() {
+    void AddCounter()
+    {
 
         counter++;
         if(counter % 3 == 1)
@@ -48,8 +54,6 @@ public class ChangeObject : MonoBehaviour
             ToggleActivityBook(false);
             ToggleActivityTV(true);
 
-
-
         }
 
 
@@ -57,7 +61,22 @@ public class ChangeObject : MonoBehaviour
     private void ToggleActivityAlarm(bool active)
     {
         sRandomizer.audioGroupAlarm.gameObject.SetActive(active);
-        fireAlarm.SetActive(active);
+        //fireAlarm.SetActive(active);
+
+        if(active)
+        {
+            if(!fireAlarmAS.isPlaying)
+            {
+                fireAlarmAS.Play();
+            }
+        }
+        else
+        {
+            fireAlarmAS.Stop();
+
+        }
+
+
         foreach(var item in sRandomizer.audioSourceChildrenAlarm)
         {
             item.gameObject.SetActive(active);
@@ -66,8 +85,19 @@ public class ChangeObject : MonoBehaviour
     private void ToggleActivityBook(bool active)
     {
         sRandomizer.audioGroupBook.gameObject.SetActive(active);
-        book.SetActive(active);
+        // book.SetActive(active);
+        if(active)
+        {
+            if(!bookAS.isPlaying)
+            {
+                bookAS.Play();
+            }
+        }
+        else
+        {
+            bookAS.Stop();
 
+        }
         foreach(var item in sRandomizer.audioSourceChildrenBook)
         {
             item.gameObject.SetActive(active);
@@ -77,7 +107,19 @@ public class ChangeObject : MonoBehaviour
     private void ToggleActivityTV(bool active)
     {
         sRandomizer.audioGroupTV.gameObject.SetActive(active);
-        tv.SetActive(active);
+        //  tv.SetActive(active);
+        if(active)
+        {
+            if(!tvAS.isPlaying)
+            {
+                tvAS.Play();
+            }
+        }
+        else
+        {
+            tvAS.Stop();
+
+        }
 
         foreach(var item in sRandomizer.audioSourceChildrenTV)
         {
@@ -86,9 +128,5 @@ public class ChangeObject : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
