@@ -2551,9 +2551,17 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4129469240840347979, guid: 2f1d2b97a326c6845a79f4c2e7587feb, type: 3}
+      propertyPath: range.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4129469240840347979, guid: 2f1d2b97a326c6845a79f4c2e7587feb, type: 3}
       propertyPath: audioGroup
       value: 
       objectReference: {fileID: 2016049184}
+    - target: {fileID: 4129469240840347979, guid: 2f1d2b97a326c6845a79f4c2e7587feb, type: 3}
+      propertyPath: timerForTV
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 4129469240840347979, guid: 2f1d2b97a326c6845a79f4c2e7587feb, type: 3}
       propertyPath: audioGroupTV
       value: 

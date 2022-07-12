@@ -14,9 +14,9 @@ This project is born at XR Brain Jam 2022.
 ![image](./Dcoumentations/SDK%20Path.png)
 - You should also have .cert and .privkey in a folder for further setup in Unity ([Check here to get your own certificate](https://developer.magicleap.com/en-us/learn/guides/developer-certificates))
 - Open the project 
-- You will see errors as below ![image](./Dcoumentations/errors.png)
+- You will see errors as below ![image](./Dcoumentations/errors.png) If you dont see any errors, that is great!
 - Import the package of MLTK from [magic leap](https://github.com/magicleap/Magic-Leap-Toolkit-Unity)
-- ONLY take the .package file and import it to Unity through Unity -> Assets -> Import Package -> Custom Package. More [details on how to import package](https://docs.unity3d.com/560/Documentation/Manual/AssetPackages.html)
+- ONLY take the .unitypackage file and import it to Unity through Unity -> Assets -> Import Package -> Custom Package. More [details on how to import package](https://docs.unity3d.com/560/Documentation/Manual/AssetPackages.html)
 - Switch your platform to Lumin OS for magic leap 
 ![image](./Dcoumentations//LuminOSBuild.png)
 - Browse your Lumin SDK path 

@@ -217,13 +217,15 @@ public class SpatializationRandomizer : MonoBehaviour
             }
         }*/
 
+
+   
     void UpdateLocations(GameObject _player, List<GameObject> _audioChildren, List<float> timerRemainings, List<AudioSource> audioSourceChildren)
     {
 
         for(int i = 0; i < _audioChildren.Count; i++)
         {
 
-            if(timerRemainings[i] * 10 > 0)
+            if(timerRemainings[i] > 0)
             {
 
 
@@ -231,9 +233,10 @@ public class SpatializationRandomizer : MonoBehaviour
             }
             else
             {
+                timerRemainings[i] = audioSourceChildren[i].clip.length;
+
                 _audioChildren[i].transform.localPosition = Randomization(_player.transform, _audioChildren[i].transform);
 
-                timerRemainings[i] = audioSourceChildren[i].clip.length;
 
             }
 
