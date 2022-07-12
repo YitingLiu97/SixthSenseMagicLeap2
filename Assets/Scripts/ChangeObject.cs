@@ -6,7 +6,7 @@ using UnityEngine.Video;
 
 public class ChangeObject : MonoBehaviour
 {
-    ControlInput controlInput;
+   ControlInput controlInput;
     public int counter;
     [SerializeField] SpatializationRandomizer sRandomizer;
     public GameObject fireAlarm, book, tv;

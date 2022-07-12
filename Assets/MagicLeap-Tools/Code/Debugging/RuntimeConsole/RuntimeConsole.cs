@@ -261,7 +261,6 @@ namespace MagicLeapTools
         private void ToggleVisibility()
         {
            logCanvas.gameObject.SetActive(!logCanvas.gameObject.activeInHierarchy);
-          
         }
 #endif
     }

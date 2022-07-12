@@ -36,8 +36,8 @@ public class CailbrationManager : MonoBehaviour
         }
 
         controlerPointerLineRenderer.enabled = !controlerPointerLineRenderer.enabled;
-       
-        foreach(var i in pointReceivers)
+
+        foreach (var i in pointReceivers)
         {
             i.draggable = !i.draggable;
         }

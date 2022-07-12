@@ -684,7 +684,7 @@ PlayerSettings:
     m_ModelFolderPath: C:/Users/liuyi/Unity Projects/SixthSenseMagicLeap2
     m_PortalFolderPath: C:/Users/liuyi/Unity Projects/SixthSenseMagicLeap2
   luminCert:
-    m_CertPath: C:/Users/liuyi/Downloads/woz_privatekey2-20220710T151131Z-001/woz_privatekey2/scz.cert
+    m_CertPath: C:/Users/Yiting/Downloads/woz_privatekey2-20220712T185934Z-001/woz_privatekey2/scz.cert
     m_SignPackage: 1
   luminIsChannelApp: 0
   luminVersion:
